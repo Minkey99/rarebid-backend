@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kakao Login</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f7f7f7;
+      }
+      .login-container {
+          text-align: center;
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .login-button {
+          background-color: #FEE500;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+  </style>
+</head>
+<body>
+<div class="login-container">
+  <h1>Kakao Login</h1>
+  <button class="login-button" onclick="loginWithKakao()">Login with Kakao</button>
+</div>
+
+<script>
+    function loginWithKakao() {
+        const clientId = 'a0972cee22b172ee788f1d72d2dbbf8f';
+        const redirectUri = 'http://localhost:80/kakao/callback';
+        const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}`;
+        window.location.href = kakaoAuthUrl;
+    }
+</script>
+</body>
+</html>
