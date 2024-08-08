@@ -50,9 +50,12 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 
-    // feignClient
-    implementation "org.springframework.cloud:spring-cloud-starter-openfeign"
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    //jjwt
+    implementation 'com.auth0:java-jwt:3.18.2'
+
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
 }
 
 tasks.named('test') {

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>KakaoLogin</title>
+</head>
+<body>
+<div class="container" style="display: flex; justify-content: center; align-content: center; align-items: center; flex-direction: column; margin: 200px auto;">
+  <h1>카카오 로그인</h1>
+  <div th:if="${isLoggedIn}">
+    <form th:action="@{/logout}" method="post">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+  <div th:if="${!isLoggedIn}">
+    <a th:href="${location}">
+      <img src="/kakao_login_medium_narrow.png" alt="Kakao Login">
+    </a>
+  </div>
+</div>
+</body>
+</html>

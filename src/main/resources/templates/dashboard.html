@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+<div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 50px auto;">
+  <h1>Dashboard</h1>
+  <p><strong>Name:</strong> <span th:text="${name}"></span></p>
+  <p><strong>Email:</strong> <span th:text="${email}"></span></p>
+
+  <form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+  </form>
+
+</div>
+</body>
+</html>
